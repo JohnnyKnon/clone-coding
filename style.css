@@ -5,13 +5,13 @@
   --color-white: #fff;
   --color-light-white: #eee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-pink: #465fe9;
+  --color-dark-pink: #384bba;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
-  --color-yellow: #fff7d1;
+  --color-blue: #acb7f7;
+  --color-yellow: #f8a2e7;
   --color-orange: #feb546;
   --color-black: #000;
 
@@ -98,12 +98,19 @@ p {
 /* Navbar */
 
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
 }
 
 .navbar__menu {
@@ -143,6 +150,7 @@ p {
 #home {
   background: url("imgs/BG.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -244,7 +252,7 @@ p {
 /* SKills */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-blue);
 }
 
 .skillset {
