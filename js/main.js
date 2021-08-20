@@ -66,6 +66,15 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
 
+    //Remove Selection from the previous item and select
+
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
+
+
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => { //foreach = 배열 형태로 받아옴
