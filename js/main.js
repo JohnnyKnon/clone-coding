@@ -21,8 +21,16 @@ navbarMenu.addEventListener('click', (event)=>{ // 클릭한 이벤트 추가
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
    scrollIntoView(link);
 });
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
 
 // Handle Click on "Contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
