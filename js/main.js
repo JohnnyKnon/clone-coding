@@ -55,6 +55,44 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+// Projects
+
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter; //Parent Node(부모를)를 받아와서 
+    if(filter == null){
+        return;
+    }
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => { //foreach = 배열 형태로 받아옴
+            console.log(project.dataset.type);
+    
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });      
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+    
+});
+
+// forEach 와 같은 결과값을 내는 식들
+
+// for(let project of projects){
+
+// }
+
+// let project;
+// for(let i = 0; i < projects.length ; i++){
+//     project = projects [i];
+// }
+
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector); //scrollIntoView엘리멘트 의 부모 컨테이너로 스크롤되는 메소드
