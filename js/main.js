@@ -99,16 +99,6 @@ workBtnContainer.addEventListener('click', (e) => {
     
 });
 
-// forEach 와 같은 결과값을 내는 식들
-
-// for(let project of projects){
-
-// }
-
-// let project;
-// for(let i = 0; i < projects.length ; i++){
-//     project = projects [i];
-// }
 
 
 function scrollIntoView(selector){
